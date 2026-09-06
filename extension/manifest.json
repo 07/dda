@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "多答AI - 多模型浏览器助手",
+  "version": "1.0.0",
+  "description": "在浏览器中一键调用多个AI模型，划词提问、页面总结、多回答对比，Chrome与Edge通用。",
+  "default_locale": "zh_CN",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "contextMenus",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "多答AI",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "side_panel": {
+    "default_path": "sidepanel/sidepanel.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["sidepanel/sidepanel.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

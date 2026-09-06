@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>多答AI 侧边栏</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="sidepanel">
+    <header class="sp-header">
+      <div class="sp-logo">
+        <span class="sp-logo-mark">多</span>
+        <span class="sp-logo-text">多答AI</span>
+      </div>
+      <button id="clearBtn" class="sp-clear" title="清空对话">清空</button>
+    </header>
+
+    <div class="sp-query-bar">
+      <input type="text" id="queryInput" placeholder="输入问题，多模型同时回答...">
+      <button id="sendBtn">发送</button>
+    </div>
+
+    <div class="sp-model-tabs" id="modelTabs">
+      <!-- 模型标签由 JS 渲染 -->
+    </div>
+
+    <div class="sp-content" id="contentArea">
+      <div class="sp-welcome">
+        <div class="welcome-icon">多</div>
+        <h3>一个问题，多个答案</h3>
+        <p>在任意网页选中文字，或在此输入问题，多个AI模型将同时为你作答，对比选择最合适的回答。</p>
+        <div class="welcome-tips">
+          <div class="tip">选中文字 → 右键 → 多答AI提问</div>
+          <div class="tip">点击插件图标 → 快速提问</div>
+          <div class="tip">Ctrl+Enter 快捷发送</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="sidepanel.js"></script>
+</body>
+</html>

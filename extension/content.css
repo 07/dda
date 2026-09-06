@@ -1,0 +1,29 @@
+/* 多答AI - 划词菜单样式 */
+#duoda-selection-menu {
+  position: absolute;
+  z-index: 2147483647;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 4px;
+  display: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  font-size: 13px;
+}
+#duoda-selection-menu.duoda-visible {
+  display: flex;
+  gap: 2px;
+}
+#duoda-selection-menu .duoda-menu-item {
+  padding: 6px 14px;
+  color: #e0e0e0;
+  cursor: pointer;
+  border-radius: 5px;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+#duoda-selection-menu .duoda-menu-item:hover {
+  background: #e8a33d;
+  color: #1a1a1a;
+}

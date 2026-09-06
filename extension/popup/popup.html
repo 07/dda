@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>多答AI</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="logo">
+        <span class="logo-mark">多</span>
+        <span class="logo-text">多答AI</span>
+      </div>
+      <span class="version">v1.0.0</span>
+    </header>
+
+    <div class="popup-body">
+      <div class="input-section">
+        <textarea id="questionInput" placeholder="输入你的问题，多模型同时回答..." rows="3"></textarea>
+        <div class="input-actions">
+          <button id="askBtn" class="btn-primary">多答提问</button>
+          <button id="sidepanelBtn" class="btn-secondary">打开侧边栏</button>
+        </div>
+      </div>
+
+      <div class="model-section">
+        <div class="section-label">选择参与回答的模型</div>
+        <div class="model-list" id="modelList">
+          <!-- 模型选项由 JS 渲染 -->
+        </div>
+      </div>
+
+      <div class="quick-actions">
+        <button class="quick-btn" data-action="summarize">总结当前页面</button>
+        <button class="quick-btn" data-action="translate">翻译页面</button>
+      </div>
+    </div>
+
+    <footer class="popup-footer">
+      <span>Chrome / Edge 通用</span>
+      <a href="#" id="settingsLink">设置</a>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
