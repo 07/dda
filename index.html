@@ -255,7 +255,7 @@ img { max-width: 100%; display: block; }
 .hero-visual {
   width: 100%;
 }
-.hero-visual img {
+.hero-visual > img {
   width: 100%;
   height: auto;
   border-radius: var(--radius);
@@ -963,6 +963,7 @@ img { max-width: 100%; display: block; }
       <li><a href="#compare">多答对比</a></li>
       <li><a href="#install">安装指南</a></li>
       <li><a href="#faq">常见问题</a></li>
+      <li><a href="changelog.html">更新日志</a></li>
       <li><a href="#download" class="nav-cta">免费下载</a></li>
     </ul>
   </div>
@@ -1002,7 +1003,57 @@ img { max-width: 100%; display: block; }
         </div>
       </div>
       <div class="hero-visual">
-        <img src="https://aka.doubaocdn.com/s/SMDvQHqCIM" alt="多答AI双栏并排多模型对话主界面" width="960" height="640">
+        <div class="screenshots-carousel">
+          <button class="carousel-btn prev" id="carouselPrev" aria-label="向左滚动">
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="screenshots-track" id="screenshotsTrack">
+          <div class="screenshot-card">
+            <img src="https://aka.doubaocdn.com/s/jRTwMJbAfI" alt="多答AI多模型同时回答中" width="960" height="540">
+            <div class="screenshot-card-body">
+              <span class="screenshot-card-tag">多模型同步</span>
+              <h3>一次提问，多个窗口同时作答</h3>
+              <p>输入问题后，DeepSeek、腾讯元宝、通义千问等平台同步生成回答，实时进度一目了然，无需等待逐个切换。</p>
+            </div>
+          </div>
+          <div class="screenshot-card">
+            <img src="https://aka.doubaocdn.com/s/UZMyj29QMn" alt="多答AI图片文字提取功能" width="960" height="540">
+            <div class="screenshot-card-body">
+              <span class="screenshot-card-tag">多模态能力</span>
+              <h3>图片文字提取</h3>
+              <p>发送图片即可提取其中文字，多个模型交叉验证识别结果。</p>
+            </div>
+          </div>
+          <div class="screenshot-card">
+            <img src="https://aka.doubaocdn.com/s/8kccr1u4Fd" alt="多答AI提示词模板管理" width="960" height="540">
+            <div class="screenshot-card-body">
+              <span class="screenshot-card-tag">效率工具</span>
+              <h3>提示词模板库</h3>
+              <p>工作、学习、娱乐分类提示词，商务邮件、工作汇报、项目计划一键调用。</p>
+            </div>
+          </div>
+          <div class="screenshot-card">
+            <img src="https://aka.doubaocdn.com/s/FpIgsiD4Bj" alt="多答AI平台管理设置" width="960" height="540">
+            <div class="screenshot-card-body">
+              <span class="screenshot-card-tag">平台管理</span>
+              <h3>20+ AI 平台自由组合</h3>
+              <p>国内国际主流平台全覆盖，支持分组管理、拖拽排序，自由搭配回答组合。</p>
+            </div>
+          </div>
+          <div class="screenshot-card">
+            <img src="https://aka.doubaocdn.com/s/V0OZ2TCRTd" alt="多答AI会员中心功能对比" width="960" height="540">
+            <div class="screenshot-card-body">
+              <span class="screenshot-card-tag">会员体系</span>
+              <h3>免费使用，会员进阶</h3>
+              <p>每日30次免费提问，会员解锁无限制提问、多AI总结、对话导出等高级功能。</p>
+            </div>
+          </div>
+          </div>
+          <button class="carousel-btn next" id="carouselNext" aria-label="向右滚动">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+        <div class="carousel-hint">点击左右箭头或直接拖动滚动，查看更多界面</div>
       </div>
     </div>
   </div>
@@ -1092,68 +1143,6 @@ img { max-width: 100%; display: block; }
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ============ 产品界面一览 ============ -->
-<section class="screenshots-section">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-eyebrow">产品界面</div>
-      <h2 class="section-title">真实界面，所见即所得</h2>
-      <p class="section-desc">三栏并排对话、多模型同步回答、提示词模板、平台管理——每一个功能都已经为您准备好。</p>
-    </div>
-    <div class="screenshots-carousel">
-      <button class="carousel-btn prev" id="carouselPrev" aria-label="向左滚动">
-        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <div class="screenshots-track" id="screenshotsTrack">
-      <div class="screenshot-card">
-        <img src="https://aka.doubaocdn.com/s/jRTwMJbAfI" alt="多答AI多模型同时回答中" width="960" height="540">
-        <div class="screenshot-card-body">
-          <span class="screenshot-card-tag">多模型同步</span>
-          <h3>一次提问，多个窗口同时作答</h3>
-          <p>输入问题后，DeepSeek、腾讯元宝、通义千问等平台同步生成回答，实时进度一目了然，无需等待逐个切换。</p>
-        </div>
-      </div>
-      <div class="screenshot-card">
-        <img src="https://aka.doubaocdn.com/s/UZMyj29QMn" alt="多答AI图片文字提取功能" width="960" height="540">
-        <div class="screenshot-card-body">
-          <span class="screenshot-card-tag">多模态能力</span>
-          <h3>图片文字提取</h3>
-          <p>发送图片即可提取其中文字，多个模型交叉验证识别结果。</p>
-        </div>
-      </div>
-      <div class="screenshot-card">
-        <img src="https://aka.doubaocdn.com/s/8kccr1u4Fd" alt="多答AI提示词模板管理" width="960" height="540">
-        <div class="screenshot-card-body">
-          <span class="screenshot-card-tag">效率工具</span>
-          <h3>提示词模板库</h3>
-          <p>工作、学习、娱乐分类提示词，商务邮件、工作汇报、项目计划一键调用。</p>
-        </div>
-      </div>
-      <div class="screenshot-card">
-        <img src="https://aka.doubaocdn.com/s/FpIgsiD4Bj" alt="多答AI平台管理设置" width="960" height="540">
-        <div class="screenshot-card-body">
-          <span class="screenshot-card-tag">平台管理</span>
-          <h3>20+ AI 平台自由组合</h3>
-          <p>国内国际主流平台全覆盖，支持分组管理、拖拽排序，自由搭配回答组合。</p>
-        </div>
-      </div>
-      <div class="screenshot-card">
-        <img src="https://aka.doubaocdn.com/s/V0OZ2TCRTd" alt="多答AI会员中心功能对比" width="960" height="540">
-        <div class="screenshot-card-body">
-          <span class="screenshot-card-tag">会员体系</span>
-          <h3>免费使用，会员进阶</h3>
-          <p>每日30次免费提问，会员解锁无限制提问、多AI总结、对话导出等高级功能。</p>
-        </div>
-      </div>
-      </div>
-      <button class="carousel-btn next" id="carouselNext" aria-label="向右滚动">
-        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-    </div>
-    <div class="carousel-hint">点击左右箭头或直接拖动滚动，查看更多界面</div>
   </div>
 </section>
 
@@ -1314,6 +1303,7 @@ img { max-width: 100%; display: block; }
             <li><a href="#features">功能介绍</a></li>
             <li><a href="#compare">多答对比</a></li>
             <li><a href="#download">下载插件</a></li>
+            <li><a href="changelog.html">更新日志</a></li>
           </ul>
         </div>
         <div class="footer-col">
